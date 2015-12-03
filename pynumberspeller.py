@@ -1,4 +1,6 @@
+#!/bin/env python
 import random
+import sys
 # pyNumberSpeller
 
 small_number = {
@@ -69,6 +71,9 @@ def spell(number):
 
 
 if __name__ == '__main__':
-    for i in xrange(100):
-        x = random.randint(-10**3,10**3)
-        print x,spell(x)
+    if len(sys.argv) > 1:
+        print spell(int(sys.argv[1]))
+    else:
+        for i in xrange(100):
+            x = random.randint(-10**3,10**3)
+            print x,spell(x)
