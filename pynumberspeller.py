@@ -72,7 +72,7 @@ def spell(number):
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        print spell(int(sys.argv[1]))
+        print '\n'.join(map(lambda x : spell(int(x)), sys.argv[1:]))
     else:
         for i in xrange(100):
             x = random.randint(-10**3,10**3)
